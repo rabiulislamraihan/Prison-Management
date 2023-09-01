@@ -170,7 +170,9 @@ public class BudgetAllocationSceneController implements Initializable {
                                 "Tools: " + c.getTools() + ", " + 
                                 "Furniture: " + c.getFurniture() +  ", " + 
                                 "Clothes: "  + c.getClothes() + ", " + 
-                                "BudgetRemaining: " + c.getBudgetRemaining() + "\n");
+                                "BudgetRemaining: " + c.getBudgetRemaining() + "\n" +
+                        "Total Budget: " + c.calculateTotalBudget() + "\n" + 
+                        "Hello I am Shatabdy !!!\n");
                
             }
         }

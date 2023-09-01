@@ -98,6 +98,9 @@ public class Budget implements Serializable {
     public void setBudgetRemaining(int BudgetRemaining) {
         this.BudgetRemaining = BudgetRemaining;
     }
+    public int calculateTotalBudget() {
+        return Food + HealthCare + Tools + Furniture + Clothes;
+    }
     
     
     
