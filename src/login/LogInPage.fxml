@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="1000" prefWidth="1600" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LogInPageController">
+<AnchorPane id="AnchorPane" prefHeight="1000" prefWidth="1600" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LogInPageController">
    <children>
       <TextField fx:id="idTextFieldfxid" layoutX="709.0" layoutY="385.0" promptText="ID" />
       <TextField fx:id="passwordTextFieldfxid" layoutX="709.0" layoutY="431.0" promptText="Password" />
@@ -19,6 +19,6 @@
       <Label layoutX="597.0" layoutY="436.0" text="Enter password" />
       <Label layoutX="595.0" layoutY="478.0" text="Enter User Type" />
       <ComboBox fx:id="userTypeComboBoxfxid" layoutX="709.0" layoutY="473.0" prefHeight="26.0" prefWidth="171.0" promptText="User type" />
-      <Button layoutX="50.0" layoutY="54.0" mnemonicParsing="false" onAction="#backButtonOnClick" text="back" />
+      <Button layoutX="607.0" layoutY="607.0" mnemonicParsing="false" onAction="#backButtonOnClick" text="back" />
    </children>
 </AnchorPane>
