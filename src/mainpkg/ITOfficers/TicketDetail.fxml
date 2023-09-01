@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="623.0" prefWidth="493.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.ITOfficers.TicketDetailController">
+   <children>
+      <Label layoutX="65.0" layoutY="121.0" text="Ticket ID:" />
+      <TextField fx:id="ticketIdTextField" editable="false" layoutX="198.0" layoutY="116.0" prefHeight="27.0" prefWidth="192.0" />
+      <Label layoutX="63.0" layoutY="156.0" prefHeight="17.0" prefWidth="138.0" text="Ticket Sent Date:" />
+      <Label layoutX="75.0" layoutY="199.0" text="User:" />
+      <Label layoutX="72.0" layoutY="237.0" text="Status" />
+      <TextField fx:id="ticketStatusTextField" editable="false" layoutX="198.0" layoutY="232.0" prefHeight="27.0" prefWidth="192.0" />
+      <TextField fx:id="ticketDateTextField" editable="false" layoutX="198.0" layoutY="151.0" prefHeight="27.0" prefWidth="192.0" />
+      <Label layoutX="54.0" layoutY="274.0" text="Ticket Details:" />
+      <Label layoutX="147.0" layoutY="43.0" prefHeight="46.0" prefWidth="271.0" text="Ticket Details">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Button layoutX="48.0" layoutY="52.0" mnemonicParsing="false" onAction="#goToHomeButtonOnClick" text="Go to Home" />
+      <TextArea fx:id="textDetailsTextArea" editable="false" layoutX="54.0" layoutY="291.0" prefHeight="93.0" prefWidth="423.0" />
+      <TextField fx:id="ticketUserTextField" layoutX="202.0" layoutY="186.0" prefHeight="27.0" prefWidth="192.0" />
+      <TextArea fx:id="messageTextArea" layoutX="48.0" layoutY="420.0" prefHeight="93.0" prefWidth="423.0" />
+      <Label layoutX="51.0" layoutY="397.0" text="Your Message:" />
+      <Button layoutX="161.0" layoutY="530.0" mnemonicParsing="false" onAction="#makeResolvedButtonOnClick" prefHeight="27.0" prefWidth="122.0" text="Make Resolved" />
+   </children>
+</AnchorPane>

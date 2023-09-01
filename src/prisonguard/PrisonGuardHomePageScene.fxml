@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prisonguard.PrisonGuardHomePageSceneController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Employee Attandance">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#EntryButtonOnClick" text="Entry" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Notification">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#SendNotificationButtonOnClick" text="Send Notification" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Incident Report">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#CreateIncidentReportOnClick" text="Create Report" />
+                  <MenuItem mnemonicParsing="false" onAction="#ViewAllReportOnClick" text="View All Report" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="See Visitor Approvals">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ShowVisitorApprovalList" text="Show List" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Tasks">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ViewAssignedTasksOnClick" text="View AssignedTasks" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

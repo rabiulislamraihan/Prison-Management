@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="financeandaccounting.PaySalarySceneController">
+   <children>
+      <Label layoutX="89.0" layoutY="57.0" text="Employee ID:" />
+      <TextField fx:id="EmployeeIDTextField" layoutX="182.0" layoutY="53.0" />
+      <TableView fx:id="tableView" layoutX="34.0" layoutY="263.0" prefHeight="330.0" prefWidth="822.0">
+        <columns>
+          <TableColumn fx:id="employeeIDColumn" prefWidth="227.99999237060547" text="Employee ID" />
+          <TableColumn fx:id="gradeColumn" prefWidth="332.00006103515625" text="Grade" />
+            <TableColumn fx:id="AmmountColumn" prefWidth="262.40008544921875" text="Ammount" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="selectUserComboBox" layoutX="460.0" layoutY="53.0" prefWidth="150.0" />
+      <Label layoutX="373.0" layoutY="57.0" text="Select User:" />
+      <ComboBox fx:id="selectMonthComboBox" layoutX="460.0" layoutY="97.0" prefWidth="150.0" />
+      <Label layoutX="373.0" layoutY="101.0" text="Select Month:" />
+      <TextField fx:id="BonusTextField" layoutX="460.0" layoutY="149.0" />
+      <Label layoutX="404.0" layoutY="153.0" text="Bonus:" />
+      <Button layoutX="523.0" layoutY="200.0" mnemonicParsing="false" onMouseClicked="#PaySalaryToAllEmployeeButtonOnClick" text="Pay All Salary" />
+      <Button layoutX="664.0" layoutY="53.0" mnemonicParsing="false" onMouseClicked="#loadEmployeeButtonClick" text="Load Employee" />
+      <Button layoutX="245.0" layoutY="106.0" mnemonicParsing="false" onMouseClicked="#PaySalaryToEmployeeButtonOnClick" text="Pay Salary" />
+   </children>
+</AnchorPane>

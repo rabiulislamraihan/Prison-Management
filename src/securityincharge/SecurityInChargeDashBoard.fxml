@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="securityincharge.SecurityInChargeDashBoardController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Task Management">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#AddTaskButtonOnClick" text="Add Task" />
+                  <MenuItem mnemonicParsing="false" onAction="#AssignTaskButtonOnClick" text="Assign Task" />
+                  <MenuItem mnemonicParsing="false" onAction="#PendingConfirmationTaskOnClick" text="Pending Confirmation Task" />
+                  <MenuItem mnemonicParsing="false" onAction="#SeeCompletedTaskOnclick" text="See Completed Tasks" />
+                  <MenuItem mnemonicParsing="false" onAction="#generatePDFBuuttonOnClick" text="Generate PDF" />
+                  <MenuItem mnemonicParsing="false" onAction="#prisonGuardattandance" text="Prison Guard Attandance" />
+                  <MenuItem mnemonicParsing="false" onAction="#notificationOnClick" text="Notification" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

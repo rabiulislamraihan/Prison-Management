@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prisonguard.EmployeeEntrySceneController">
+   <children>
+      <Label layoutX="126.0" layoutY="97.0" text="Employee ID:" />
+      <TextField fx:id="EmployeeIDTextField" layoutX="219.0" layoutY="93.0" />
+      <TableView fx:id="tableView" layoutX="61.0" layoutY="174.0" prefHeight="439.0" prefWidth="794.0">
+        <columns>
+          <TableColumn fx:id="EmployeeIDColumn" prefWidth="135.99996185302734" text="Employee ID" />
+            <TableColumn fx:id="EmployeeNameColumn" prefWidth="258.4000244140625" text="Employee Name" />
+            <TableColumn fx:id="EntryTimeColumn" prefWidth="196.00003051757812" text="Entry" />
+            <TableColumn fx:id="ExitTimeColumn" prefWidth="208.0" text="Exit" />
+        </columns>
+      </TableView>
+      <Button layoutX="450.0" layoutY="93.0" mnemonicParsing="false" onMouseClicked="#AddEntryButtonClick" text="Add Entry" />
+      <Button layoutX="594.0" layoutY="93.0" mnemonicParsing="false" onMouseClicked="#AddExitButtonClick" text="Add Exit" />
+      <Button layoutX="693.0" layoutY="93.0" mnemonicParsing="false" onMouseClicked="#DownloadPDFButtonOnClick" text="Download PDF" />
+   </children>
+</AnchorPane>

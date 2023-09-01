@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jailor.ViewCaseDetailsSceneController">
+   <children>
+      <TableView fx:id="tableView" layoutX="45.0" layoutY="51.0" prefHeight="504.0" prefWidth="810.0">
+         <columns>
+            <TableColumn fx:id="caseIDColumn" prefWidth="75.0" text="Case ID" />
+            <TableColumn fx:id="crimeColumn" prefWidth="120.7999496459961" text="Crime" />
+            <TableColumn fx:id="tssColumn" prefWidth="110.4000244140625" text="Starts" />
+            <TableColumn fx:id="tseColumn" prefWidth="122.4000244140625" text="End" />
+            <TableColumn fx:id="sentenceColumn" prefWidth="244.00009155273438" text="Sentence" />
+            <TableColumn fx:id="ActColumn" prefWidth="137.60003662109375" text="Act No." />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

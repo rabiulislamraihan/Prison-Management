@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prisonguard.SeeAssignedTaskSceneController">
+   <children>
+      <TableView fx:id="tableView" layoutX="26.0" layoutY="52.0" prefHeight="527.0" prefWidth="848.0">
+        <columns>
+          <TableColumn fx:id="taskIDColumn" prefWidth="120.80001258850098" text="Task ID" />
+            <TableColumn fx:id="TaskNameColumn" prefWidth="152.0" text="Task Name" />
+            <TableColumn fx:id="ShiftColumn" prefWidth="130.39996337890625" text="Shift Name" />
+            <TableColumn fx:id="DateColumn" prefWidth="137.60006713867188" text="Date" />
+            <TableColumn fx:id="StartTimeColumn" prefWidth="167.199951171875" text="Start Time" />
+            <TableColumn fx:id="EndColumn" prefWidth="140.0" text="End Time" />
+        </columns>
+      </TableView>
+      <Label layoutX="51.0" layoutY="20.0" text="Pending Tasks:" />
+      <Button layoutX="78.0" layoutY="599.0" mnemonicParsing="false" onMouseClicked="#seeTasksDescriptionButtonOnClick" text="See Tasks Description" />
+      <Button layoutX="601.0" layoutY="599.0" mnemonicParsing="false" onMouseClicked="#sendCompletionDescription" text="Send Completion Description" />
+   </children>
+</AnchorPane>

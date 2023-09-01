@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="1375.0" prefWidth="2067.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jailor.ApplicationApproveSceneForJailorController">
+   <children>
+      <TableView fx:id="jailorTableView" layoutX="28.0" layoutY="109.0" prefHeight="1244.0" prefWidth="2022.0">
+        <columns>
+          <TableColumn fx:id="applicantNameCol" prefWidth="145.99993896484375" text="Applicant Name" />
+          <TableColumn fx:id="nidCol" minWidth="4.000030517578125" prefWidth="108.0" text="NID" />
+            <TableColumn fx:id="applicationIdCol" prefWidth="115.0" text="Application ID" />
+            <TableColumn fx:id="applicationBodyCol" prefWidth="1232.0" text="Application body" />
+            <TableColumn fx:id="applicantTypeCol" prefWidth="154.0" text="Type" />
+            <TableColumn fx:id="approveCol" prefWidth="266.0" text="Approve" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="securityincharge.SeeCompletedTaskController">
+   <children>
+      <TableView fx:id="tableView" layoutX="38.0" layoutY="48.0" prefHeight="527.0" prefWidth="848.0">
+         <columns>
+            <TableColumn fx:id="taskIDColumn" prefWidth="120.80001258850098" text="Task ID" />
+            <TableColumn fx:id="GuarrdIDColumn" prefWidth="120.80001258850098" text="Guard ID" />
+            <TableColumn fx:id="TaskNameColumn" prefWidth="140.0" text="Task Name" />
+            <TableColumn fx:id="ShiftColumn" prefWidth="111.20004272460938" text="Shift Name" />
+            <TableColumn fx:id="DateColumn" prefWidth="135.20001220703125" text="Date" />
+            <TableColumn fx:id="StartTimeColumn" prefWidth="103.46673583984375" text="Start Time" />
+            <TableColumn fx:id="EndColumn" prefWidth="112.533203125" text="End Time" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

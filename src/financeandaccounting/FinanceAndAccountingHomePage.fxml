@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="financeandaccounting.FinanceAndAccountingHomePageController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Salary Management">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#paySalaryOnClick" text="Pay Salary" />
+                  <MenuItem mnemonicParsing="false" onAction="#SeePayMentHistoryOnClick" text="See Payment History" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Budget Management">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#BudgetAllocationOnClick" text="Allocate Budget" />
+                  <MenuItem mnemonicParsing="false" onAction="#AnalysingBudgetMonthOnClick" text="Monthly Budget Analysis" />
+                  <MenuItem mnemonicParsing="false" onAction="#AnalysingBudgetYearOnClick" text="Yearly Budget Analysis" />
+                  <MenuItem mnemonicParsing="false" onAction="#AnalysingBudgetYearToYearOnClick" text="Year to Year Budget Analysis" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

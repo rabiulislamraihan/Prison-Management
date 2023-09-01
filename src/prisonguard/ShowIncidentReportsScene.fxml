@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prisonguard.ShowIncidentReportsSceneController">
+   <children>
+      <ComboBox fx:id="selectReportComboBox" layoutX="222.0" layoutY="41.0" prefWidth="150.0" />
+      <Label layoutX="114.0" layoutY="45.0" text="Select Report:" />
+      <Button layoutX="450.0" layoutY="41.0" mnemonicParsing="false" onMouseClicked="#LoadButtonClick" text="Load" />
+      <TextArea fx:id="showReportTextArea" layoutX="36.0" layoutY="125.0" prefHeight="486.0" prefWidth="834.0" />
+   </children>
+</AnchorPane>

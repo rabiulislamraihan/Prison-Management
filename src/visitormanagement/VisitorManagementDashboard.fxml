@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1000" prefWidth="1600" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visitormanagement.VisitorManagementOfficerDashboardController">
+   <children>
+      <BorderPane fx:id="visitorManagementDashBoardBorderPane" layoutX="14.0" layoutY="14.0" prefHeight="972.0" prefWidth="1573.0">
+         <left>
+            <VBox alignment="CENTER" maxWidth="-Infinity" prefHeight="923.0" prefWidth="169.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#verifySignUpOnButtonclick" prefHeight="62.0" prefWidth="169.0" text="Varify Sign up" />
+                  <Button alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#viewVarifiedUsersButtonOnClick" prefHeight="63.0" prefWidth="175.0" text="View Varified users" />
+                  <Button alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#applicationsButtonOnClick" prefHeight="63.0" prefWidth="322.0" text="Applications" />
+                  <Button alignment="CENTER" layoutX="10.0" layoutY="74.0" mnemonicParsing="false" onAction="#scheduleAppointmentButtonOnClick" prefHeight="63.0" prefWidth="209.0" text="Schedule Appointment" />
+                  <Button alignment="CENTER" layoutX="10.0" layoutY="202.0" mnemonicParsing="false" onAction="#permissionCardbuttonOnClick" prefHeight="64.0" prefWidth="173.0" text="Permission card" />
+                  <Button alignment="CENTER" layoutX="10.0" layoutY="330.0" mnemonicParsing="false" onAction="#reportButtonOnclick" prefHeight="64.0" prefWidth="179.0" text="Report" />
+                  <Button alignment="CENTER" layoutX="10.0" layoutY="202.0" mnemonicParsing="false" onAction="#viewReportReqbuttonOnclick" prefHeight="64.0" prefWidth="178.0" text="View report req" />
+                  <Button alignment="CENTER" layoutX="10.0" layoutY="484.0" mnemonicParsing="false" onAction="#viewNotificationButtonOnClick" prefHeight="64.0" prefWidth="174.0" text="View Notification" />
+                  <Button alignment="CENTER" layoutX="10.0" layoutY="487.0" mnemonicParsing="false" onAction="#goToHomeButtonOnClick" prefHeight="64.0" prefWidth="174.0" text="Go to Home" />
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <Label alignment="CENTER" text="This is visitor management common dashboard" textAlignment="JUSTIFY" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

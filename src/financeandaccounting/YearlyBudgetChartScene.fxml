@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="900.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="financeandaccounting.YearlyBudgetChartSceneController">
+   <children>
+      <Label layoutX="104.0" layoutY="65.0" text="Select Year" />
+      <TextField fx:id="yearTextField" layoutX="199.0" layoutY="61.0" />
+      <Button layoutX="450.0" layoutY="61.0" mnemonicParsing="false" onMouseClicked="#loadButtonClick" text="Load" />
+      <LineChart fx:id="lineChart" layoutX="200.0" layoutY="134.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+   </children>
+</AnchorPane>

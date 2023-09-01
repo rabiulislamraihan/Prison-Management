@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="financeandaccounting.EmployeeSalaryHistorySceneController">
+   <children>
+      <TableView fx:id="tableView" layoutX="66.0" layoutY="68.0" prefHeight="542.0" prefWidth="779.0">
+        <columns>
+          <TableColumn fx:id="employeeIDColumn" prefWidth="140.80001068115234" text="EmployeeID" />
+            <TableColumn fx:id="MonthColumn" prefWidth="138.39996337890625" text="Month" />
+            <TableColumn fx:id="YearColumn" prefWidth="88.0" text="Year" />
+            <TableColumn fx:id="BaseSalaryColumn" prefWidth="139.20004272460938" text="Base Salary" />
+            <TableColumn fx:id="BounsColumn" prefWidth="124.0" text="Bonus" />
+            <TableColumn fx:id="TotalColumn" prefWidth="149.60003662109375" text="Total" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

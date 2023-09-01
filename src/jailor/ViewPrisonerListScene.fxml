@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jailor.ViewPrisonerListSceneController">
+   <children>
+      <TableView fx:id="tableView" layoutX="47.0" layoutY="31.0" prefHeight="516.0" prefWidth="806.0">
+        <columns>
+          <TableColumn fx:id="prisonIDColumn" prefWidth="97.60002899169922" text="Prisoner ID" />
+            <TableColumn fx:id="nameColumn" prefWidth="162.39999389648438" text="Name" />
+            <TableColumn fx:id="nidColumn" prefWidth="83.199951171875" text="NID" />
+            <TableColumn fx:id="dobColumn" prefWidth="116.0" text="Date Of Birth" />
+            <TableColumn fx:id="genderColumn" prefWidth="94.39999389648438" text="Gender" />
+            <TableColumn fx:id="prisoncellBlockColumn" prefWidth="115.199951171875" text="Prison Cell Block" />
+            <TableColumn fx:id="statusColumn" prefWidth="141.60009765625" text="Status" />
+        </columns>
+      </TableView>
+      <Button layoutX="632.0" layoutY="584.0" mnemonicParsing="false" onMouseClicked="#ViewcaseInfoOnClick" text="View case Info" />
+   </children>
+</AnchorPane>

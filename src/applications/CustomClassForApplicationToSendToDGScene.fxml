@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="1293.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="applications.CustomClassForApplicationToSendToDGSceneController">
+<TableView fx:id="tableView" prefHeight="680.0" prefWidth="1577.0">
+    <columns>
+        <TableColumn fx:id="applicantNameColumn" prefWidth="202.0" text="Applicant Name" />
+        <TableColumn fx:id="applicantIdColumn" prefWidth="226.0" text="Applicant ID" />
+         <TableColumn fx:id="applicationIdColumn" prefWidth="296.0" text="Application ID" />
+        <TableColumn fx:id="applicationBodyColumn" prefWidth="636.0" text="Application Body" />
+         <TableColumn fx:id="isApprovedCol" prefWidth="216.0" text="IsApproved?" />
+    </columns>
+</TableView>
+</AnchorPane>

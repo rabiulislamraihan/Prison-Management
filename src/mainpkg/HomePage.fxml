@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="homepageBorderPanefxid" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.HomePageController">
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            <Button onAction="#logInButtonOnClick" text="Log in" />
+            <Button onAction="#signUpButtonOnClick" text="Sign Up" />
+         <Button mnemonicParsing="false" onAction="#superUserButtonOnClick" text="Super User" />
+        </VBox>
+    </center>
+   <top>
+      <Label fx:id="homePageLabelfxid" alignment="CENTER" prefHeight="104.0" prefWidth="613.0" text="Welcome to Jail Management Software" textAlignment="CENTER" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+   </top>
+</BorderPane>

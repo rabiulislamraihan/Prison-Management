@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1291.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nonauthorityuser.PermissionCardPdfgeneratorController">
+    <TableView fx:id="tableView" layoutX="20.0" layoutY="20.0" prefHeight="560.0" prefWidth="1224.0">
+        <columns>
+            <TableColumn fx:id="dateColumn" prefWidth="120.0" text="Date" />
+            <TableColumn fx:id="startTimeColumn" prefWidth="120.0" text="Start Time" />
+            <TableColumn fx:id="endTimeColumn" prefWidth="120.0" text="End Time" />
+            <TableColumn fx:id="activityColumn" prefWidth="200.0" text="Activity" />
+            <TableColumn fx:id="nonAuthorityUserColumn" prefWidth="200.0" text="Non-Authority User" />
+            <TableColumn fx:id="applicationColumn" prefWidth="200.0" text="Application" />
+            <TableColumn fx:id="generatePDF" prefWidth="156.0" text="generate PDF" />
+         <TableColumn fx:id="sendEmailCol" prefWidth="107.0" text="Send Email" />
+        </columns>
+    </TableView>
+</AnchorPane>

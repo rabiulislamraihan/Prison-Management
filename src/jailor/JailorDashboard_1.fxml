@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="jailorDashboard" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jailor.JailorDashboard_1Controller">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Select Operation">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#viewTaskUpdatesOnClick" text="View Task Updates" />
+                  <MenuItem mnemonicParsing="false" onAction="#addInmateRecordOnClick" text="Add Prisoner" />
+                  <MenuItem mnemonicParsing="false" onAction="#ViewPrisonerOnClick" text="View Prisoner" />
+                  <MenuItem mnemonicParsing="false" onAction="#SearchPrisonerOnClick" text="Search Prisoner" />
+                  <MenuItem mnemonicParsing="false" onAction="#ReleasePlanOnClick" text="Release Plan" />
+                  <MenuItem mnemonicParsing="false" onAction="#ViewReleasePlanOnClick" text="View Release Plan" />
+                  <MenuItem mnemonicParsing="false" onAction="#showCrimePieChartOnClick" text="Crime Chart" />
+                  <MenuItem mnemonicParsing="false" onAction="#approveApplicationButtonOnclick" text="Approve Application for Visitor management" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Rehabilitation">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#addProgramButtonOnclick" text="Add Program" />
+                  <MenuItem mnemonicParsing="false" onAction="#addRehabilitationOnClick" text="Add Rehabilitation" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Notifications">
+            <items>
+              <MenuItem mnemonicParsing="false" text="View Notification" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

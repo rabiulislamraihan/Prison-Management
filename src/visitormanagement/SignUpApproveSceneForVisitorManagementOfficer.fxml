@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1174.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visitormanagement.SignUpApproveSceneForVisitorManagementOfficerController">
+    <TableView fx:id="tableView" layoutX="20.0" layoutY="20.0" prefHeight="560.0" prefWidth="1132.0">
+        <columns>
+            <TableColumn fx:id="nameColumn" prefWidth="100.0" text="Name" />
+            <TableColumn fx:id="dobColumn" prefWidth="100.0" text="Date of Birth" />
+            <TableColumn fx:id="nidColumn" prefWidth="100.0" text="NID" />
+            <TableColumn fx:id="fatherNameColumn" prefWidth="100.0" text="Father's Name" />
+            <TableColumn fx:id="motherNameColumn" prefWidth="100.0" text="Mother's Name" />
+            <TableColumn fx:id="passwordColumn" prefWidth="100.0" text="Password" />
+            <TableColumn fx:id="contactNoColumn" prefWidth="100.0" text="Contact No" />
+            <TableColumn fx:id="addressColumn" prefWidth="100.0" text="Address" />
+            <TableColumn fx:id="nationalityColumn" prefWidth="100.0" text="Nationality" />
+            <TableColumn fx:id="userTypeColumn" prefWidth="100.0" text="User Type" />
+            <TableColumn fx:id="approveColumn" prefWidth="131.0" text="Approve" />
+        </columns>
+    </TableView>
+</AnchorPane>

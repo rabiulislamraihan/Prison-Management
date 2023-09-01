@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="financeandaccounting.BudgetAllocationSceneController">
+   <children>
+      <Label layoutX="104.0" layoutY="93.0" text="Budget:" />
+      <TextField fx:id="BudgetTextField" layoutX="184.0" layoutY="89.0" />
+      <Label layoutX="104.0" layoutY="149.0" text="Food:" />
+      <TextField fx:id="FoodTextField" layoutX="184.0" layoutY="145.0" />
+      <Label layoutX="104.0" layoutY="210.0" text="Health Care:" />
+      <TextField fx:id="HealthCareTextField" layoutX="184.0" layoutY="206.0" />
+      <Label layoutX="108.0" layoutY="266.0" text="Tools:" />
+      <TextField fx:id="ToolsTextField" layoutX="184.0" layoutY="262.0" />
+      <Label layoutX="413.0" layoutY="210.0" text="Furniture:" />
+      <TextField fx:id="FurnitureTextField" layoutX="490.0" layoutY="206.0" />
+      <Label layoutX="418.0" layoutY="266.0" text="Clothes:" />
+      <TextField fx:id="ClothesTextField" layoutX="490.0" layoutY="262.0" />
+      <Button layoutX="734.0" layoutY="167.0" mnemonicParsing="false" onMouseClicked="#AllocateBudgetOnClick" text="Allocate Budget" />
+      <Button layoutX="744.0" layoutY="219.0" mnemonicParsing="false" onMouseClicked="#ShowResultOnClick" text="Show Result" />
+      <TextArea fx:id="showResultTextArea" layoutX="36.0" layoutY="325.0" prefHeight="279.0" prefWidth="842.0" />
+      <ComboBox fx:id="monthComboBox" layoutX="490.0" layoutY="89.0" prefWidth="150.0" />
+      <Label layoutX="413.0" layoutY="93.0" text="Month:" />
+      <Label layoutX="413.0" layoutY="145.0" text="Year" />
+      <TextField fx:id="yearTextField" layoutX="490.0" layoutY="145.0" />
+   </children>
+</AnchorPane>

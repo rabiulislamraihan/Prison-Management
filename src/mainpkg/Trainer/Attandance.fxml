@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.Trainer.AttandanceController">
+   <children>
+      <TableView fx:id="attandanceTableViewFxid" layoutX="9.0" layoutY="100.0" prefHeight="200.0" prefWidth="582.0">
+        <columns>
+          <TableColumn fx:id="prisonerIdTableColomnFxid" prefWidth="75.0" text="Prisoner ID" />
+          <TableColumn fx:id="prisonerNameTableColomnFxid" prefWidth="302.0" text="Prisoner Name" />
+            <TableColumn fx:id="presentTableColomnFxid" prefWidth="93.0" text="Absent" />
+            <TableColumn fx:id="presentTableColomnFxid1" prefWidth="111.0" text="Attendance" />
+        </columns>
+      </TableView>
+      <Label fx:id="statusLabelForAttandance" layoutX="14.0" layoutY="20.0" text="Prisoner Attendance:" />
+      <ComboBox fx:id="attendanceCourseListComboBox" layoutX="143.0" layoutY="15.0" onAction="#attendanceCourseListOnClick" prefWidth="150.0" promptText="COURSE NAME" />
+   </children>
+</AnchorPane>

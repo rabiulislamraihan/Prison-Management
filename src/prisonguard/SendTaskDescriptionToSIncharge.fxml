@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="900.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="prisonguard.SendTaskDescriptionToSInchargeController">
+   <children>
+      <Label layoutX="68.0" layoutY="52.0" text="Description:" />
+      <TextArea fx:id="descriptionTextArea" layoutX="32.0" layoutY="77.0" prefHeight="496.0" prefWidth="818.0" />
+      <Button layoutX="750.0" layoutY="591.0" mnemonicParsing="false" onMouseClicked="#sendDescriptionOnClick" text="Send" />
+   </children>
+</AnchorPane>

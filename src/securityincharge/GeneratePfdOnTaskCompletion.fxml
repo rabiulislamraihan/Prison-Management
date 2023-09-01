@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="securityincharge.GeneratePfdOnTaskCompletionController">
+   <children>
+      <TableView fx:id="tableView" layoutX="26.0" layoutY="46.0" prefHeight="527.0" prefWidth="848.0">
+         <columns>
+            <TableColumn fx:id="taskIDColumn" prefWidth="100.00000190734863" text="Task ID" />
+            <TableColumn fx:id="GuarrdIDColumn" prefWidth="98.40001678466797" text="Guard ID" />
+            <TableColumn fx:id="TaskNameColumn" prefWidth="136.0" text="Task Name" />
+            <TableColumn fx:id="ShiftColumn" prefWidth="124.79998779296875" text="Shift Name" />
+            <TableColumn fx:id="DateColumn" prefWidth="99.20004272460938" text="Date" />
+            <TableColumn fx:id="StartTimeColumn" prefWidth="83.99993896484375" text="Start Time" />
+            <TableColumn fx:id="EndColumn" prefWidth="91.99993896484375" text="End Time" />
+            <TableColumn fx:id="StatusColumn" prefWidth="91.99993896484375" text="Status" />
+         </columns>
+      </TableView>
+      <Button layoutX="61.0" layoutY="583.0" mnemonicParsing="false" onMouseClicked="#GeneratePDFOnClick" text="Generate PDF" />
+   </children>
+</AnchorPane>

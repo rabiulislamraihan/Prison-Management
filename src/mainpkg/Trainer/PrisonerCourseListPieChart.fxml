@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.Trainer.PrisonerCourseListPieChartController">
+   <children>
+      <Label layoutX="48.0" layoutY="32.0" text="Pie Chart of Prisoner's Course list" />
+      <PieChart fx:id="prisonerCourseListPieChartFxid" layoutX="58.0" layoutY="74.0" prefHeight="288.0" prefWidth="485.0" />
+      <Label fx:id="statusLabelfxid" layoutX="195.0" layoutY="362.0" prefHeight="17.0" prefWidth="68.0" text=":   TBA" />
+      <Label layoutX="108.0" layoutY="362.0" prefHeight="17.0" prefWidth="111.0" text="In Numbers" />
+   </children>
+</AnchorPane>

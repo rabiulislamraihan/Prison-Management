@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="415.0" prefWidth="650.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="notifications.ShowNotificationController">
+   <children>
+      <TableView fx:id="tableView" layoutY="58.0" prefHeight="216.0" prefWidth="650.0">
+         <columns>
+            <TableColumn fx:id="notificationIDColumn" minWidth="0.0" prefWidth="95.0" text="Notification ID" />
+            <TableColumn fx:id="notificationDetailsColumn" minWidth="0.0" prefWidth="259.0" text="Notification Details" />
+            <TableColumn fx:id="notificationDateColumn" prefWidth="116.0" text="Date" />
+            <TableColumn fx:id="notificationUserColumn" prefWidth="187.0" text="User Receipent" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
