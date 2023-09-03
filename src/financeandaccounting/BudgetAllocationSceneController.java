@@ -19,8 +19,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import msc.AppendableObjectOutputStream;
 
@@ -32,8 +35,6 @@ import msc.AppendableObjectOutputStream;
 public class BudgetAllocationSceneController implements Initializable {
 
     @FXML
-    private TextField BudgetTextField;
-    @FXML
     private TextField FoodTextField;
     @FXML
     private TextField HealthCareTextField;
@@ -44,40 +45,38 @@ public class BudgetAllocationSceneController implements Initializable {
     @FXML
     private TextField ClothesTextField;
     @FXML
-    private TextArea showResultTextArea;
-    @FXML
     private ComboBox<String> monthComboBox;
     @FXML
-    private TextField yearTextField;
-    private int currentBudget = 1000000;
+    private TableView<Budget> tableView;
+    @FXML
+    private TableColumn<Budget, Integer> yearColumn;
+    @FXML
+    private TableColumn<Budget, String> monthColumn;
+    @FXML
+    private TableColumn<Budget, Integer> healthCare;
+    @FXML
+    private TableColumn<Budget, Integer> ToolsColumn;
+    @FXML
+    private TableColumn<Budget, Integer> FurnitureColumn;
+    @FXML
+    private TableColumn<Budget, Integer> ClothesColumn;
+    @FXML
+    private TableColumn<Budget, Integer> totalBudgetColumn;
+    @FXML
+    private ComboBox<Integer> yearComboBox;
 
-    /**
-     * Initializes the controller class.
-     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        ObjectInputStream ois = null;
-        Budget oc = null;
-        try {
-             Budget c;
-             ois = new ObjectInputStream(new FileInputStream("BudgetAllocation.bin"));
-             
-            while(true){
-                c = (Budget) ois.readObject();
-                currentBudget = c.getBudgetRemaining();
-                
-            }
-        }
-        catch(RuntimeException e){
-            e.printStackTrace();
-        }
-        catch (Exception ex) {
-            try {
-                if(ois!=null)
-                    ois.close();
-            } catch (IOException ex1) {  }           
-        }
-        BudgetTextField.setText(Integer.toString(currentBudget));
+
+        
+        yearColumn.setCellValueFactory(new PropertyValueFactory<Budget,Integer>("Year"));
+        monthColumn.setCellValueFactory(new PropertyValueFactory<Budget,String>("Month"));
+        healthCare.setCellValueFactory(new PropertyValueFactory<Budget,Integer>("HealthCare"));
+        ToolsColumn.setCellValueFactory(new PropertyValueFactory<Budget,Integer>("Tools"));
+        FurnitureColumn.setCellValueFactory(new PropertyValueFactory<Budget,Integer>("Furniture"));
+        ClothesColumn.setCellValueFactory(new PropertyValueFactory<Budget,Integer>("Clothes"));
+        totalBudgetColumn.setCellValueFactory(new PropertyValueFactory<Budget,Integer>("TotalBudget"));
+
         monthComboBox.getItems().addAll(
                 "January",
                 "February",
@@ -91,31 +90,25 @@ public class BudgetAllocationSceneController implements Initializable {
                 "October",
                 "November",
                 "Deecember");
-        // TODO
+        for (int i = 2023; i < 2030; i ++) {
+            yearComboBox.getItems().add(i);
+        }
     }    
 
     @FXML
     private void AllocateBudgetOnClick(MouseEvent event) {
-        int budget = Integer.parseInt(BudgetTextField.getText());
-//        int food = Integer.parseInt(FoodTextField.getText());
-
-
-        int food = 0;
-        String foodbudget = FoodTextField.getText();
-        if(!foodbudget.equals("")) {
-            food = Integer.parseInt(foodbudget);
-            
-        }
-        
+        int food = Integer.parseInt(FoodTextField.getText());
         int healthCare = Integer.parseInt(HealthCareTextField.getText());
         int tools = Integer.parseInt(ToolsTextField.getText());
         int furniture = Integer.parseInt(FurnitureTextField.getText());
         int clothes = Integer.parseInt(ClothesTextField.getText());
-        String month = monthComboBox.getValue();
-        int year = Integer.parseInt(yearTextField.getText());
-        currentBudget = budget - food - healthCare - tools - furniture - clothes;
+        int total = food + healthCare + tools + furniture + clothes;
         
-        Budget b = new Budget(month, year, food, healthCare, tools, furniture, clothes, currentBudget);
+        String month = monthComboBox.getValue();
+        int year = yearComboBox.getValue();
+        
+        Budget b = new Budget(month, year, food, healthCare, tools, furniture, clothes, total);
+        
         File f = null;
         FileOutputStream fos = null;      
         ObjectOutputStream oos = null;
@@ -147,32 +140,20 @@ public class BudgetAllocationSceneController implements Initializable {
         a.setHeaderText("Alert");
         a.setContentText("Budget Has Been Allocated !");
         a.showAndWait();
-        BudgetTextField.setText(Integer.toString(currentBudget));
-        
     }
 
     @FXML
     private void ShowResultOnClick(MouseEvent event) {
+        tableView.getItems().clear();
         
         ObjectInputStream ois = null;
-        showResultTextArea.setText("");
         try {
              Budget c;
              ois = new ObjectInputStream(new FileInputStream("BudgetAllocation.bin"));
              
             while(true){
                 c = (Budget) ois.readObject();
-                showResultTextArea.appendText(
-                                "Month: " + c.getMonth() + ", " + 
-                                "Year: " + c.getYear() + ", " + 
-                                "Food: " + c.getFood() + ", " + 
-                                "HealthCare: " + c.getHealthCare() + ", " + 
-                                "Tools: " + c.getTools() + ", " + 
-                                "Furniture: " + c.getFurniture() +  ", " + 
-                                "Clothes: "  + c.getClothes() + ", " + 
-                                "BudgetRemaining: " + c.getBudgetRemaining() + "\n" +
-                        "Total Budget: " + c.calculateTotalBudget() + "\n" + 
-                        "Hello I am Shatabdy !!!\n");
+                tableView.getItems().add(c);
                
             }
         }

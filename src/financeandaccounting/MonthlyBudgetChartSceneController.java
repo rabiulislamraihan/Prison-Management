@@ -28,9 +28,9 @@ public class MonthlyBudgetChartSceneController implements Initializable {
     @FXML
     private ComboBox<String> selectMonthComboBox;
     @FXML
-    private TextField yearTextField;
-    @FXML
     private PieChart PieChart;
+    @FXML
+    private ComboBox<Integer> yearComboBox;
 
     /**
      * Initializes the controller class.
@@ -50,13 +50,16 @@ public class MonthlyBudgetChartSceneController implements Initializable {
                 "October",
                 "November",
                 "December");
+        for (int i = 2023; i < 2030; i ++) {
+            yearComboBox.getItems().add(i);
+        }
         // TODO
     }    
 
     @FXML
     private void LoadPieChartButtonOnClick(MouseEvent event) {
         String month = selectMonthComboBox.getValue();
-        int year = Integer.parseInt(yearTextField.getText());
+        int year = yearComboBox.getValue();
         
         
         ObservableList <PieChart.Data> list = FXCollections.observableArrayList();

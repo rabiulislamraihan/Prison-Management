@@ -14,6 +14,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.PieChart;
 import javafx.scene.chart.XYChart;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
@@ -24,16 +25,20 @@ import javafx.scene.input.MouseEvent;
  */
 public class YearlyBudgetChartSceneController implements Initializable {
 
-    @FXML
     private TextField yearTextField;
     @FXML
     private LineChart<String, Number> lineChart;
+    @FXML
+    private ComboBox<Integer> yearComboBox;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        for (int i = 2023; i < 2030; i++) {
+            yearComboBox.getItems().add(i);
+        }
         // TODO
     }    
 

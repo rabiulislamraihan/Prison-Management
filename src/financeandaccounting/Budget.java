@@ -1,5 +1,3 @@
-// Hello Shatabdy, This is me, Dio !!! Buhaha
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -12,6 +10,7 @@ import java.io.Serializable;
  *
  * @author raiha
  */
+
 public class Budget implements Serializable {
     private String Month;
     private int Year;
@@ -20,9 +19,9 @@ public class Budget implements Serializable {
     private int Tools;
     private int Furniture;
     private int Clothes;
-    private int BudgetRemaining;
+    private int TotalBudget;
 
-    public Budget(String Month, int Year, int Food, int HealthCare, int Tools, int Furniture, int Clothes, int BudgetRemaining) {
+    public Budget(String Month, int Year, int Food, int HealthCare, int Tools, int Furniture, int Clothes, int TotalBudget) {
         this.Month = Month;
         this.Year = Year;
         this.Food = Food;
@@ -30,11 +29,9 @@ public class Budget implements Serializable {
         this.Tools = Tools;
         this.Furniture = Furniture;
         this.Clothes = Clothes;
-        this.BudgetRemaining = BudgetRemaining;
+        this.TotalBudget = TotalBudget;
     }
     
-    
-
     public String getMonth() {
         return Month;
     }
@@ -91,20 +88,15 @@ public class Budget implements Serializable {
         this.Clothes = Clothes;
     }
 
-    public int getBudgetRemaining() {
-        return BudgetRemaining;
+    public int getTotalBudget() {
+        return TotalBudget;
     }
 
-    public void setBudgetRemaining(int BudgetRemaining) {
-        this.BudgetRemaining = BudgetRemaining;
+    public void setTotalBudget(int TotalBudget) {
+        this.TotalBudget = TotalBudget;
     }
     public int calculateTotalBudget() {
         return Food + HealthCare + Tools + Furniture + Clothes;
     }
-    
-    
-    
-    
-    
     
 }
