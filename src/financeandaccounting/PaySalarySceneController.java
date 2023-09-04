@@ -84,8 +84,12 @@ public class PaySalarySceneController implements Initializable {
             FinanceAndAccountOfficer.showAlert("Employee Not Foun");
             return;
         }
-        getInfo();
-        Salary s = new Salary (Integer.parseInt(EmployeeIDTextField.getText()), grade, ammount, selectMonthComboBox.getValue(), Integer.parseInt(BonusTextField.getText()));
+        int bonus = 0;
+        if(!BonusTextField.getText().equals("")) {
+            bonus = Integer.parseInt(BonusTextField.getText());
+        }
+        Salary s = new Salary (Integer.parseInt(EmployeeIDTextField.getText()), grade, ammount, selectMonthComboBox.getValue(), bonus);
+        tableView.getItems().add(s);
         FinanceAndAccountOfficer.paySalary(s);
         FinanceAndAccountOfficer.showAlert("Salary has been paid");
         
@@ -150,8 +154,12 @@ public class PaySalarySceneController implements Initializable {
 
     @FXML
     private void PaySalaryToAllEmployeeButtonOnClick(MouseEvent event) {
+        int bonus = 0;
+        if(!BonusTextField.getText().equals("")) {
+            bonus = Integer.parseInt(BonusTextField.getText());
+        }
         for (int i = 0; i < list.size(); i ++) {
-            Salary s =  new Salary(list.get(i).getId(), grade, ammount, selectMonthComboBox.getValue(), Integer.parseInt(BonusTextField.getText()));
+            Salary s =  new Salary(list.get(i).getId(), grade, ammount, selectMonthComboBox.getValue(), bonus);
             FinanceAndAccountOfficer.paySalary(s);
         }
         FinanceAndAccountOfficer.showAlert("Salary has been paid");

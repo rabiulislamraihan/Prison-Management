@@ -25,7 +25,6 @@ import javafx.scene.input.MouseEvent;
  */
 public class YearlyBudgetChartSceneController implements Initializable {
 
-    private TextField yearTextField;
     @FXML
     private LineChart<String, Number> lineChart;
     @FXML
@@ -45,7 +44,7 @@ public class YearlyBudgetChartSceneController implements Initializable {
     @FXML
     private void loadButtonClick(MouseEvent event) {
         lineChart.getData().clear();
-        int year = Integer.parseInt(yearTextField.getText());
+        int year = yearComboBox.getValue();
         XYChart.Series<String,Number> series1 = new XYChart.Series<String,Number>();
         series1.getData().add(new XYChart.Data<String,Number>("Jan", totalBudget("January", year)));
         series1.getData().add(new XYChart.Data<String,Number>("Feb", totalBudget("February", year)));

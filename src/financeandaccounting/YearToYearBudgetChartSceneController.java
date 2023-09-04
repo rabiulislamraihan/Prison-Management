@@ -26,8 +26,6 @@ import javafx.scene.input.MouseEvent;
  */
 public class YearToYearBudgetChartSceneController implements Initializable {
 
-    private TextField startYearTextField;
-    private TextField endYearTextField;
     @FXML
     private BarChart<String, Number> barChart;
     @FXML
@@ -70,8 +68,8 @@ public class YearToYearBudgetChartSceneController implements Initializable {
                     ois.close();
             } catch (IOException ex1) {  }           
         }
-        int startYear = Integer.parseInt(startYearTextField.getText());
-        int endYear = Integer.parseInt(endYearTextField.getText());
+        int startYear = startYearComboBox.getValue();
+        int endYear = endYearComboBox.getValue();
         barChart.getData().clear();
         XYChart.Series<String,Number> series = new XYChart.Series<String,Number>();
         for (int i = startYear; i<= endYear; i ++) {
